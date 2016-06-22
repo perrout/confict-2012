@@ -1,0 +1,1 @@
+<?phpif(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { 	die('You are not allowed to call this page directly.'); }/* Edição de resumos */function ic_deletar_resumo(){	global $wpdb;	$wpdb->query( "DELETE FROM wp_resumos where ID='".$_GET['ID']."'" );	include_once ( dirname (__FILE__) . '/ic-resumo.php' );	ic_resumo();}?>
